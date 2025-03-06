@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Health Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .survey-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <h1>Institutional Health Survey</h1>
+        <form id="surveyForm">
+            <!-- Section 1: Health Education & Awareness -->
+            <fieldset>
+                <legend>1. Health Education & Awareness</legend>
+                <div class="question">
+                    <label>Does the institution provide regular health education (e.g., nutrition, hygiene, sexual health, substance abuse prevention)?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Are students taught skills like CPR, first aid, or mental health coping strategies?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>How are teachers/staff trained to recognize and address student health concerns (e.g., anxiety, eating disorders)?</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Section 2: Physical Health Facilities -->
+            <fieldset>
+                <legend>2. Physical Health Facilities</legend>
+                <div class="question">
+                    <label>Is there a functional clinic or nurse’s office on campus with trained medical staff?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Are first-aid kits available in classrooms, labs, and sports facilities?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Are sanitation facilities (toilets, hand washing stations) clean, stocked, and accessible?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Does the institution provide nutritious meals/snacks, and are food safety standards enforced?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Section 3: Mental Health & Well-Being -->
+            <fieldset>
+                <legend>3. Mental Health & Well-Being</legend>
+                <div class="question">
+                    <label>Are counseling services available for students/staff? If so, how accessible and confidential are they?</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <div class="question">
+                    <label>Does the institution have anti-bullying policies that address mental health impacts?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Are there programs to reduce academic stress (e.g., mindfulness sessions, flexible deadlines)?</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Add more sections (4-9) similarly -->
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
